@@ -1,0 +1,11 @@
+run: "npm start"
+seed: "node src/seed.js"
+test: "node src/test.js"
+base_url: "http://localhost:3000"
+endpoints:
+  - POST /api/generate
+  - GET /api/usage/:tenantId
+  - POST /api/checkout
+  - POST /webhooks/stripe
+  - GET /api/tenants
+  - POST /api/tenants
