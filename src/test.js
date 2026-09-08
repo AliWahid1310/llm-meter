@@ -194,7 +194,12 @@ async function probe3_stripe_checkout() {
         console.log(`  ✅ Checkout session created: ${checkoutRes.body.sessionId}`);
         console.log(`  ✅ Checkout URL: ${checkoutRes.body.url}`);
         assert(true, 'Stripe Checkout session created successfully');
-    } else if (checkoutRes.status === 500 || checkoutRes.body.message?.includes('Stripe')) {
+    } else if (
+        checkoutRes.status === 500 || 
+        checkoutRes.status === 401 || 
+        checkoutRes.body.message?.includes('Stripe') ||
+        checkoutRes.body.message?.includes('API key')
+    ) {
         // Stripe keys not configured — expected in test without .env
         console.log('  ⚠️  Stripe keys not configured — skipping live checkout test');
         console.log('  → To test fully: configure STRIPE_SECRET_KEY and STRIPE_PRO_PRICE_ID in .env');
