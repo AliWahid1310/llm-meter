@@ -129,9 +129,29 @@ stripe trigger customer.subscription.updated
 stripe trigger customer.subscription.deleted
 ```
 
-### Run Tests
+### Run with Docker Compose
 
 ```bash
+# Build and run container with persistent volume
+docker compose up -d
+
+# Check health status
+docker compose ps
+
+# Seed demo data in container
+docker compose exec llm-meter npm run seed
+
+# Run acceptance tests inside container
+docker compose exec llm-meter npm test
+```
+
+### Run Tests Locally
+
+```bash
+# Ensure server is running or start it
+npm start
+
+# In another terminal, run all 5 acceptance probes:
 npm test
 ```
 
