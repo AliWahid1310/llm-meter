@@ -1,0 +1,38 @@
+### 1. Health Check
+GET http://localhost:3000/health
+
+### 2. List All Tenants
+GET http://localhost:3000/api/tenants
+
+### 3. Create New Tenant
+POST http://localhost:3000/api/tenants
+Content-Type: application/json
+
+{
+  "name": "Acme AI Corp",
+  "plan": "free"
+}
+
+### 4. Record Billable AI Generation (Idempotent)
+POST http://localhost:3000/api/generate
+Content-Type: application/json
+Idempotency-Key: req-sample-uuid-001
+
+{
+  "tenantId": "0807c145-cb75-4e39-a234-f4c83d68beda",
+  "inputTokens": 1000,
+  "cachedInputTokens": 500,
+  "outputTokens": 200,
+  "reasoningTokens": 100
+}
+
+### 5. Check Tenant Usage Rollup & Costs
+GET http://localhost:3000/api/usage/0807c145-cb75-4e39-a234-f4c83d68beda
+
+### 6. Create Stripe Checkout Session for Pro Upgrade
+POST http://localhost:3000/api/checkout
+Content-Type: application/json
+
+{
+  "tenantId": "0807c145-cb75-4e39-a234-f4c83d68beda"
+}
