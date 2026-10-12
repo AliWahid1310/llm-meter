@@ -5,9 +5,10 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "node --watch src/app.js",
+    "dev": "node --watch-path=src src/app.js",
     "seed": "node src/seed.js",
-    "test": "node src/test.js"
+    "test": "node src/test.js",
+    "frontend": "npm run dev --prefix frontend"
   },
   "keywords": [
     "billing",

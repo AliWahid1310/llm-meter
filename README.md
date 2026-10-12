@@ -155,6 +155,28 @@ npm start
 npm test
 ```
 
+## Next.js Frontend Dashboard
+
+The repository includes a modern Next.js frontend located in [`frontend/`](./frontend) running on port `3001`.
+
+```bash
+# Start frontend directly from root
+npm run frontend
+
+# Or navigate to frontend folder
+cd frontend
+npm run dev
+```
+
+Visit **http://localhost:3001** to view:
+- **Tenant Management**: Switch active tenants or create new tenants with live quota tracking.
+- **Real-Time Quota Gauges**: Visual progress meters for API Calls and AI Tokens with pre-action quota limits.
+- **Token Category Breakdown**: Visual stacked composition and rate details for Standard Input, Cached Input (-75% discount), Output, and Reasoning tokens.
+- **Spend & Cost Analytics**: Integer micro-dollar (µ$) and formatted dollar calculations.
+- **Live LLM Playground**: Interactively test `/api/generate` with preset scenarios, customizable token sliders, and idempotency key replay detection.
+- **Stripe Subscription Management**: Free vs Pro plan comparison with automated Checkout session creation.
+
+
 ## API Endpoints
 
 ### `POST /api/generate` — Billable Action
