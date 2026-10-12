@@ -244,7 +244,13 @@ export default function DashboardPage() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <div className={styles.brandGroup}>
-            <div className={styles.brandLogo}>M</div>
+            <div className={styles.brandLogo} title="MeterFlow Engine">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 14a8 8 0 1 1 16 0" stroke="#09090b" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M12 14L15.5 8.5" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" />
+                <circle cx="12" cy="14" r="2.25" fill="#09090b" />
+              </svg>
+            </div>
             <div className={styles.brandText}>
               <div className={styles.brandTitle}>METERFLOW</div>
               <div className={styles.brandSubtitle}>LLM Usage & Billing Infrastructure</div>
