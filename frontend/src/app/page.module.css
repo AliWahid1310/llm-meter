@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f8fafc;
+  background-color: #f1f5f9;
 }
 
 /* Header */
@@ -223,7 +223,7 @@
 
 .tenantSelect {
   background: #ffffff;
-  border: 1px solid var(--border-medium);
+  border: 1px solid var(--border-light);
   color: var(--black-primary);
   font-family: var(--font-sans);
   font-size: 0.9rem;
@@ -453,8 +453,12 @@
 /* Token Pricing Breakdown Table */
 .tokenTable {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.85rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
 .tokenTable th {
@@ -540,7 +544,7 @@
 
 .numberInput {
   background: #ffffff;
-  border: 1px solid var(--border-medium);
+  border: 1px solid var(--border-light);
   color: var(--black-primary);
   font-family: var(--font-mono);
   font-size: 0.9rem;
@@ -604,7 +608,7 @@
 .keyInput {
   flex: 1;
   background: #ffffff;
-  border: 1px solid var(--border-medium);
+  border: 1px solid var(--border-light);
   color: var(--black-primary);
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -620,6 +624,7 @@
 /* Console Response Inspector */
 .responseBox {
   background: #09090b;
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   padding: 16px;
   color: #f4f4f5;

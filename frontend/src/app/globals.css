@@ -24,9 +24,9 @@
   --yellow-badge-border: rgba(202, 138, 4, 0.3);
   --yellow-badge-text: #854d0e;
 
-  /* Neutral Borders & Dividers */
-  --border-light: #e2e8f0;
-  --border-medium: #cbd5e1;
+  /* Neutral Borders & Dividers - Distinct Light Grey */
+  --border-light: #d1d5db;
+  --border-medium: #9ca3af;
   --border-dark: #09090b;
 
   /* Typography Colors */
